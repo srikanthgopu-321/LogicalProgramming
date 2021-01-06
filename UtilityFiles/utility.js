@@ -32,5 +32,17 @@ module.exports = {
         let sorted1 = str1.split(' ').sort().join(' ').toLowerCase();
         let sorted2 = str2.split(' ').sort().join(' ').toLowerCase();
         return (sorted1 === sorted2);
-    }
+    },
+    expenses(quantity,price_per_iterm) {
+        let total_expense;
+
+        total_expense = quantity*price_per_iterm;
+
+        if(total_expense >= 1000 ) {
+        
+            discount = total_expense * 0.1;
+            total_expense = total_expense - discount;
+        }
+        return total_expense;
+    },
 }
