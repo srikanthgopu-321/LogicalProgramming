@@ -45,4 +45,26 @@ module.exports = {
         }
         return total_expense;
     },
+    withdraw(withdraw_amout,initial_amount) {
+        let amount;
+
+        if(withdraw_amout % 5 == 0 && initial_amount > (withdraw_amout + 0.5 )) {
+            amount = (initial_amount - withdraw_amout - 0.5);
+        } else {
+            console.log("amount should be multiple of 5")
+        }
+
+        return amount;
+    },
+    withdraw(withdraw_amout,initial_amount) {
+        let amount;
+
+        if(withdraw_amout % 5 == 0 && initial_amount > (withdraw_amout + 0.5 )) {
+            amount = (initial_amount - withdraw_amout - 0.5);
+        } else {
+            console.log("amount should be multiple of 5")
+        }
+
+        return amount;
+    }
 }
