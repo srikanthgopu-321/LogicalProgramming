@@ -22,5 +22,15 @@ module.exports = {
 
         return sum;
 
+    },
+    secondLargestNumber(n1,n2,n3) {
+
+        sL = n1>n2&&n1>n3 ? n2>n3?n2:n3 : n2>n1&&n2>n3 ? n1>n3?n1:n3 : n1>n2?n1:n2;
+        return sL;
+    },
+    isAnagram(str1, str2) {
+        let sorted1 = str1.split(' ').sort().join(' ').toLowerCase();
+        let sorted2 = str2.split(' ').sort().join(' ').toLowerCase();
+        return (sorted1 === sorted2);
     }
 }
