@@ -10,5 +10,17 @@ module.exports = {
         }
         return sum;
 
+    },
+    firstandLastSum(number) {
+
+        lastDigit = number%10;
+        firstDigit = number;
+        while(firstDigit >= 10) {
+            firstDigit = Math.floor(firstDigit/10);
+        }
+        sum = lastDigit + firstDigit;
+
+        return sum;
+
     }
 }
